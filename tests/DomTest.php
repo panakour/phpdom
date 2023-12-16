@@ -195,6 +195,11 @@ class DomTest extends TestCase
         $class = "mt20";
         $this->dom->removeElementsByClass($class);
         $this->assertStringNotContainsString('mt20', $this->dom->get());
+
+        $class = "tags-list";
+        $this->dom->removeElementsByClass($class);
+        $this->assertStringNotContainsString('tags-list', $this->dom->get());
+
     }
 
     public function testSetAttributes()

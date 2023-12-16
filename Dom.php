@@ -105,7 +105,7 @@ class Dom
     public function removeElementsByClass(string $class): void
     {
         $xpath = new \DOMXPath($this->DOMDocument);
-        foreach ($xpath->query("//div[contains(attribute::class, $class)]") as $e) {
+        foreach ($xpath->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $class ')]") as $e) {
             $e->parentNode->removeChild($e);
         }
     }
