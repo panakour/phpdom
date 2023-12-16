@@ -1,0 +1,33 @@
+{
+  "name": "panakour/phpdom",
+  "description": "Some helpers around PHP DOM native classes",
+  "keywords": [
+    "dom",
+    "php",
+    "phpdom"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Panagiots Koursaris",
+      "email": "panakourweb@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-dom": "*",
+    "ext-libxml": "*",
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5.3",
+    "vimeo/psalm": "^5.18.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Panakour\\DOM\\": ""
+    },
+    "exclude-from-classmap": [
+      "/tests/"
+    ]
+  }
+}
