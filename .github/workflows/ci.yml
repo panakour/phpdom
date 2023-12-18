@@ -61,6 +61,9 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
   release:
+    permissions:
+      contents: write
+    name: "Tagged Release"
     needs: test
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
